@@ -8,6 +8,7 @@ public class Funcions {
 	static final char BUIT = ' ';
 	static int qFiles, qColumnes;
 	static final char MOVIMENTS = 'X';
+	
 
 	// Funció per definir el tauler
 	static char[][] definirTauler() {
@@ -56,7 +57,7 @@ public class Funcions {
 	static int demanarCoordenades() {
 
 		int fc;
-		return fc = Teclat.lligInt("Nº de Fila i Columna:", 5, 9);
+		return fc = Teclat.lligInt("Nº de Fila i Columna:",1, 9);
 
 	}
 
@@ -297,5 +298,21 @@ public class Funcions {
 		}
 
 	}
+	
+	static void borrarMoviments(char [][] tauler) {
+		int movEsborrats = 0;
+		for (int i = 1; i < qFiles; i++) {
+			for (int j = 1; j < qColumnes; j++) {
+				if (tauler[i][j] == MOVIMENTS) {
+					tauler[i][j] = BUIT;
+					movEsborrats ++;
+				}
+			}
+		}
+		
+	}
+	
+	
+	
 
 }

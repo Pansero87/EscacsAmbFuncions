@@ -62,7 +62,7 @@ public class Escacs {
 				}
 				
 			case 3:
-				
+			Funcions.borrarMoviments(tauler);
 
 			}
 
